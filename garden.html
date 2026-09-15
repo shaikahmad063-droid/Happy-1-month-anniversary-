@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulip Garden - Nida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #e63946; --accent: #ff85a1; --bg: #0d0b18; --card: rgba(255, 255, 255, 0.08); }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; }
+
+        nav { background: rgba(13, 11, 24, 0.9); padding: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top:0; z-index:100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { background: var(--primary); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--accent); margin-bottom: 15px; }
+
+        .garden-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .tulip-item { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.3s; width: 220px; }
+        .tulip-item:hover { transform: scale(1.05); border-color: var(--accent); }
+        .tulip-item i { font-size: 4rem; color: var(--accent); margin-bottom: 15px; }
+        .tulip-msg { display: none; margin-top: 10px; font-size: 0.9rem; color: #ff85a1; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">30 Reasons</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="letter.html">Love Letter</a>
+        <a href="open-when.html">Open When</a>
+        <a href="garden.html" class="active">Tulip Garden</a>
+        <a href="wish.html">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <h1>Nida's Digital Tulip Garden 🌷</h1>
+        <p>Click each tulip to reveal a special sweet note!</p>
+
+        <div class="garden-grid">
+            <div class="tulip-item" onclick="revealTulip('t1')">
+                <i class="fa-solid fa-seedling"></i>
+                <p id="t1" class="tulip-msg">A tulip for your incredible smile!</p>
+            </div>
+            <div class="tulip-item" onclick="revealTulip('t2')">
+                <i class="fa-solid fa-seedling"></i>
+                <p id="t2" class="tulip-msg">A tulip for all our hilarious inside jokes!</p>
+            </div>
+            <div class="tulip-item" onclick="revealTulip('t3')">
+                <i class="fa-solid fa-seedling"></i>
+                <p id="t3" class="tulip-msg">A tulip to celebrate 1 month together!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealTulip(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
