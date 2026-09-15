@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter - Nida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #e63946; --accent: #ff85a1; --bg: #0d0b18; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; }
+
+        nav { background: rgba(13, 11, 24, 0.9); padding: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top:0; z-index:100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { background: var(--primary); }
+
+        .container { max-width: 650px; margin: 50px auto; padding: 0 20px; text-align: center; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; }
+
+        .envelope-btn { background: var(--primary); color: white; border: none; padding: 15px 30px; font-size: 1.1rem; border-radius: 30px; cursor: pointer; transition: 0.3s; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(230,57,70,0.4); }
+        .envelope-btn:hover { transform: scale(1.05); }
+
+        .letter-paper { display: none; background: #fff; color: #222; padding: 40px; border-radius: 15px; font-family: 'Dancing Script', cursive; font-size: 1.8rem; line-height: 1.6; text-align: left; box-shadow: 0 0 25px rgba(255,133,161,0.3); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">30 Reasons</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="letter.html" class="active">Love Letter</a>
+        <a href="open-when.html">Open When</a>
+        <a href="garden.html">Tulip Garden</a>
+        <a href="wish.html">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <h1>A Special Message For Nida</h1>
+        <button class="envelope-btn" onclick="openLetter()"><i class="fa-solid fa-envelope-open"></i> Click to Open Letter</button>
+
+        <div class="letter-paper" id="letterPaper">
+            <p>Dearest Nida,</p><br>
+            <p>Happy 1 Month Anniversary!</p><br>
+            <p>Going from close friends to dating has been the most amazing chapter. Thank you for making these past 30 days full of endless happiness, laughter, and sweet moments.</p><br>
+            <p>I look forward to celebrating many more months and years together!</p><br>
+            <p style="text-align: right;">Forever Yours ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById('letterPaper').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
