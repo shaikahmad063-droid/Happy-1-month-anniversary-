@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Playlist - 1 Month Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #e63946; --accent: #ff85a1; --bg: #0d0b18; --card: rgba(255, 255, 255, 0.08); }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; }
+
+        nav { background: rgba(13, 11, 24, 0.9); padding: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top:0; z-index:100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { background: var(--primary); }
+
+        .container { max-width: 650px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--accent); margin-bottom: 30px; }
+
+        .song-card { background: var(--card); padding: 18px 25px; border-radius: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+        .song-card:hover { background: rgba(255,255,255,0.12); border-color: var(--accent); }
+        .song-info { text-align: left; }
+        .song-info h4 { color: white; font-size: 1.1rem; }
+        .song-info p { opacity: 0.7; font-size: 0.85rem; }
+        .play-btn { color: var(--accent); font-size: 1.5rem; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">30 Reasons</a>
+        <a href="playlist.html" class="active">Playlist</a>
+        <a href="letter.html">Love Letter</a>
+        <a href="open-when.html">Open When</a>
+        <a href="garden.html">Tulip Garden</a>
+        <a href="wish.html">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <h1>Songs That Remind Me of Nida</h1>
+
+        <div class="song-card">
+            <div class="song-info">
+                <h4>Until I Found You</h4>
+                <p>Stephen Sanchez</p>
+            </div>
+            <i class="fa-solid fa-circle-play play-btn"></i>
+        </div>
+
+        <div class="song-card">
+            <div class="song-info">
+                <h4>Perfect</h4>
+                <p>Ed Sheeran</p>
+            </div>
+            <i class="fa-solid fa-circle-play play-btn"></i>
+        </div>
+
+        <div class="song-card">
+            <div class="song-info">
+                <h4>Golden Hour</h4>
+                <p>JVKE</p>
+            </div>
+            <i class="fa-solid fa-circle-play play-btn"></i>
+        </div>
+    </div>
+</body>
+              </html>
+              
