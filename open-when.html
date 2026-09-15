@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open When... - Nida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #e63946; --accent: #ff85a1; --bg: #0d0b18; --card: rgba(255, 255, 255, 0.08); }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; }
+
+        nav { background: rgba(13, 11, 24, 0.9); padding: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top:0; z-index:100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { background: var(--primary); }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--accent); margin-bottom: 30px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .envelope-card { background: var(--card); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.3s; }
+        .envelope-card:hover { transform: translateY(-5px); border-color: var(--accent); background: rgba(255,255,255,0.12); }
+        .envelope-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 12px; }
+        .note-text { display: none; margin-top: 15px; font-size: 0.9rem; color: var(--accent); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">30 Reasons</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="letter.html">Love Letter</a>
+        <a href="open-when.html" class="active">Open When</a>
+        <a href="garden.html">Tulip Garden</a>
+        <a href="wish.html">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <h1>Open When... Envelopes</h1>
+
+        <div class="grid">
+            <div class="envelope-card" onclick="toggleNote('note1')">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Open when you miss me...</h3>
+                <p id="note1" class="note-text">Remember that I'm always just a message or call away, thinking about you! ❤️</p>
+            </div>
+
+            <div class="envelope-card" onclick="toggleNote('note2')">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Open when you need a smile...</h3>
+                <p id="note2" class="note-text">You are my favorite person, and you bring so much joy into my life! 😊</p>
+            </div>
+
+            <div class="envelope-card" onclick="toggleNote('note3')">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Open when you had a long day...</h3>
+                <p id="note3" class="note-text">Take a deep breath and relax. You worked hard and I'm super proud of you! 🌷</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleNote(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+  </html>
+  
