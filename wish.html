@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Finale - Happy 1 Month!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        :root { --primary: #e63946; --accent: #ff85a1; --bg: #0d0b18; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background: var(--bg); color: white; min-height: 100vh; text-align: center; }
+
+        nav { background: rgba(13, 11, 24, 0.9); padding: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: sticky; top:0; z-index:100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        nav a:hover, nav a.active { background: var(--primary); }
+
+        .container { max-width: 700px; margin: 80px auto; padding: 0 20px; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 4.5rem; color: var(--accent); margin-bottom: 15px; }
+
+        .celebrate-btn { background: var(--primary); color: white; border: none; padding: 18px 40px; font-size: 1.3rem; border-radius: 40px; cursor: pointer; transition: 0.3s; box-shadow: 0 0 20px rgba(230,57,70,0.6); margin-top: 30px; }
+        .celebrate-btn:hover { transform: scale(1.08); background: #f72585; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">30 Reasons</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="letter.html">Love Letter</a>
+        <a href="open-when.html">Open When</a>
+        <a href="garden.html">Tulip Garden</a>
+        <a href="wish.html" class="active">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <h1>Happy 1 Month Anniversary, Nida! ❤️</h1>
+        <p>Click the button below to trigger the celebration!</p>
+
+        <button class="celebrate-btn" onclick="popConfetti()"><i class="fa-solid fa-heart"></i> Celebrate Our 1 Month!</button>
+    </div>
+
+    <script>
+        function popConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
